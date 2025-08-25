@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Products | VMSmartHomes</title>
+  <meta name="description" content="Explore VMSmartHomes products for smart homes and businesses.">
+  <link rel="canonical" href="/products.html">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header class="site-header" role="banner">
+    <div class="container header-flex">
+      <a href="index.html" class="logo" aria-label="VMSmartHomes Home">VMSmartHomes</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Open navigation menu">
+          <span class="burger" aria-hidden="true"></span>
+        </button>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="for-home.html">For Home</a></li>
+          <li><a href="for-business.html">For Business</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="nav-profile-dropdown">
+            <span class="profile-btn" aria-haspopup="true" aria-expanded="false" aria-controls="profile-menu" tabindex="0">
+              Profile <span class="dropdown-caret">▼</span>
+              <button class="profile-dropdown-toggle" aria-label="Toggle profile menu" tabindex="-1" aria-controls="profile-menu" aria-expanded="false">▾</button>
+            </span>
+            <ul id="profile-menu" class="profile-dropdown-menu" role="menu" tabindex="-1">
+              <li role="none"><a href="login.html" role="menuitem">Login</a></li>
+              <li role="none"><a href="register.html" role="menuitem">Register</a></li>
+              <li role="none"><a href="profile.html" role="menuitem">My Profile</a></li>
+              <li role="none"><a href="basket.html" role="menuitem">Basket</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <section class="products-hero hero-content">
+      <h1>Products</h1>
+      <p>Discover our range of smart devices and solutions for every home and business.</p>
+    </section>
+    <div class="products-layout">
+      <aside class="filters" aria-label="Product Filters">
+        <form>
+          <fieldset class="filters__group">
+            <legend><i class="fa fa-list about-icon-grey"></i> Category</legend>
+            <div><input type="checkbox" id="cat-lighting" name="category" value="lighting"><label for="cat-lighting"> Lighting</label></div>
+            <div><input type="checkbox" id="cat-hvac" name="category" value="hvac"><label for="cat-hvac"> HVAC</label></div>
+            <div><input type="checkbox" id="cat-shading" name="category" value="shading"><label for="cat-shading"> Shading</label></div>
+            <div><input type="checkbox" id="cat-security" name="category" value="security"><label for="cat-security"> Security</label></div>
+            <div><input type="checkbox" id="cat-multimedia" name="category" value="multimedia"><label for="cat-multimedia"> Multimedia &amp; Audio</label></div>
+            <div><input type="checkbox" id="cat-energy" name="category" value="energy"><label for="cat-energy"> Energy &amp; Power</label></div>
+            <div><input type="checkbox" id="cat-hubs" name="category" value="hubs"><label for="cat-hubs"> Hubs &amp; Controllers</label></div>
+            <div><input type="checkbox" id="cat-accessories" name="category" value="accessories"><label for="cat-accessories"> Accessories</label></div>
+          </fieldset>
+          <fieldset class="filters__group">
+            <legend><i class="fa fa-sitemap about-icon-grey"></i> Protocol</legend>
+            <div><input type="checkbox" id="proto-zigbee" name="protocol" value="Zigbee"><label for="proto-zigbee"> Zigbee</label></div>
+            <div><input type="checkbox" id="proto-zwave" name="protocol" value="Z-Wave"><label for="proto-zwave"> Z-Wave</label></div>
+            <div><input type="checkbox" id="proto-matter" name="protocol" value="Matter"><label for="proto-matter"> Matter</label></div>
+            <div><input type="checkbox" id="proto-wifi" name="protocol" value="Wi-Fi"><label for="proto-wifi"> Wi-Fi</label></div>
+            <div><input type="checkbox" id="proto-thread" name="protocol" value="Thread"><label for="proto-thread"> Thread</label></div>
+          </fieldset>
+          <fieldset class="filters__group">
+            <legend><i class="fa fa-industry about-icon-grey"></i> Brand</legend>
+            <div><input type="checkbox" id="brand-philips" name="brand" value="Philips"><label for="brand-philips"> Philips</label></div>
+            <div><input type="checkbox" id="brand-bosch" name="brand" value="Bosch"><label for="brand-bosch"> Bosch</label></div>
+            <div><input type="checkbox" id="brand-nest" name="brand" value="Nest"><label for="brand-nest"> Nest</label></div>
+            <div><input type="checkbox" id="brand-sonos" name="brand" value="Sonos"><label for="brand-sonos"> Sonos</label></div>
+            <div><input type="checkbox" id="brand-hue" name="brand" value="Hue"><label for="brand-hue"> Hue</label></div>
+            <div><input type="checkbox" id="brand-ecobee" name="brand" value="Ecobee"><label for="brand-ecobee"> Ecobee</label></div>
+            <div><input type="checkbox" id="brand-ikea" name="brand" value="IKEA"><label for="brand-ikea"> IKEA</label></div>
+            <div><input type="checkbox" id="brand-apple" name="brand" value="Apple"><label for="brand-apple"> Apple</label></div>
+          </fieldset>
+          <fieldset class="filters__group">
+            <legend><i class="fa fa-plug about-icon-grey"></i> Compatibility</legend>
+            <div><input type="checkbox" id="comp-alexa" name="compatibility" value="alexa"><label for="comp-alexa"> Alexa</label></div>
+            <div><input type="checkbox" id="comp-google" name="compatibility" value="google"><label for="comp-google"> Google Home</label></div>
+            <div><input type="checkbox" id="comp-apple" name="compatibility" value="apple"><label for="comp-apple"> Apple Home</label></div>
+          </fieldset>
+          <fieldset class="filters__group">
+            <legend><i class="fa fa-euro-sign about-icon-grey"></i> Price</legend>
+            <label for="min-price">Min</label>
+            <input type="number" id="min-price" name="min-price" min="0" step="1">
+            <label for="max-price">Max</label>
+            <input type="number" id="max-price" name="max-price" min="0" step="1">
+            <input type="range" id="price-range" name="price-range" min="0" max="1000" step="10">
+          </fieldset>
+          <fieldset class="filters__group">
+            <legend><i class="fa fa-star about-icon-grey"></i> Rating</legend>
+            <div><input type="radio" id="rating-4" name="rating" value="4"><label for="rating-4"> 4★+</label></div>
+            <div><input type="radio" id="rating-3" name="rating" value="3"><label for="rating-3"> 3★+</label></div>
+          </fieldset>
+          <fieldset class="filters__group">
+            <legend><i class="fa fa-check about-icon-grey"></i> Availability</legend>
+            <div><input type="checkbox" id="in-stock" name="in-stock"><label for="in-stock"> In stock only</label></div>
+          </fieldset>
+        </form>
+      </aside>
+      <section class="products-main">
+        <div class="results-bar">
+          <input type="search" id="product-search" placeholder="Search by name or SKU" aria-label="Search products">
+          <select id="sort-products" aria-label="Sort products">
+            <option value="popular">Popular</option>
+            <option value="price-asc">Price ↑</option>
+            <option value="price-desc">Price ↓</option>
+            <option value="newest">Newest</option>
+          </select>
+          <span class="results-count" aria-live="polite">24 results</span>
+        </div>
+        <nav class="products-toc" aria-label="Product Categories">
+          <ul>
+            <li><a href="#lighting">Lighting</a></li>
+            <li><a href="#hvac">HVAC</a></li>
+            <li><a href="#shading">Shading</a></li>
+            <li><a href="#security">Security</a></li>
+            <li><a href="#multimedia">Multimedia &amp; Audio</a></li>
+            <li><a href="#energy">Energy &amp; Power</a></li>
+            <li><a href="#hubs">Hubs &amp; Controllers</a></li>
+            <li><a href="#accessories">Accessories</a></li>
+          </ul>
+        </nav>
+        <div class="product-grid">
+          <article class="product-card">
+            <img src="images/product1.jpg" alt="Smart Hub" width="220" height="165">
+            <h2>Smart Hub</h2>
+            <div class="price">€129</div>
+            <div class="card-actions">
+              <a href="product-detail.html?sku=HUB001" class="btn">View details</a>
+            </div>
+          </article>
+          <article class="product-card">
+            <img src="images/product2.jpg" alt="Smart Thermostat" width="220" height="165">
+            <h2>Smart Thermostat</h2>
+            <div class="price">€89</div>
+            <div class="card-actions">
+              <a href="product-detail.html?sku=THERM001" class="btn">View details</a>
+            </div>
+          </article>
+          <article class="product-card">
+            <img src="images/product3.jpg" alt="Security Camera" width="220" height="165">
+            <h2>Security Camera</h2>
+            <div class="price">€59</div>
+            <div class="card-actions">
+              <a href="product-detail.html?sku=CAM001" class="btn">View details</a>
+            </div>
+          </article>
+          <article class="product-card">
+            <img src="images/product4.jpg" alt="Smart Lighting" width="220" height="165">
+            <h2>Smart Lighting</h2>
+            <div class="price">€39</div>
+            <div class="card-actions">
+              <a href="product-detail.html?sku=LIGHT001" class="btn">View details</a>
+            </div>
+          </article>
+          <article class="product-card">
+            <img src="images/product5.jpg" alt="Smart Door Lock" width="220" height="165">
+            <h2>Smart Door Lock</h2>
+            <div class="price">€99</div>
+            <div class="card-actions">
+              <a href="product-detail.html?sku=LOCK001" class="btn">View details</a>
+            </div>
+          </article>
+          <article class="product-card">
+            <img src="images/product6.jpg" alt="Energy Monitor" width="220" height="165">
+            <h2>Energy Monitor</h2>
+            <div class="price">€49</div>
+            <div class="card-actions">
+              <a href="product-detail.html?sku=ENERGY001" class="btn">View details</a>
+            </div>
+          </article>
+        </div>
+        <div class="pagination-bar">
+          <button class="btn btn-secondary" id="load-more-products">Load more</button>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-flex">
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="for-home.html">For Home</a></li>
+          <li><a href="for-business.html">For Business</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube" class="social-icon"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <small>© 2025 VMSmartHomes - All Rights Reserved | <a href="#">Privacy</a> | <a href="#">Terms of Use</a></small>
+    </div>
+  </footer>
+</body>
+</html>

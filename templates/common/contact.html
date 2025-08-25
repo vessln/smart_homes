@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | VMSmartHomes</title>
+  <meta name="description" content="Contact VMSmartHomes for demos, support, or questions.">
+  <link rel="canonical" href="/contact.html">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script defer src="app.js"></script>
+  <!--
+    In Django, this will become base.html.
+    This page will use: {% extends "base.html" %} and {% block content %}...{% endblock %}
+  -->
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header class="site-header" role="banner">
+    <div class="container header-flex">
+      <a href="index.html" class="logo" aria-label="VMSmartHomes Home">VMSmartHomes</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Open navigation menu">
+          <span class="burger" aria-hidden="true"></span>
+        </button>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="for-home.html">For Home</a></li>
+          <li><a href="for-business.html">For Business</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="nav-profile-dropdown">
+            <span class="profile-btn" aria-haspopup="true" aria-expanded="false" aria-controls="profile-menu" tabindex="0">
+              Profile <span class="dropdown-caret">▼</span>
+              <button class="profile-dropdown-toggle" aria-label="Toggle profile menu" tabindex="-1" aria-controls="profile-menu" aria-expanded="false">▾</button>
+            </span>
+            <ul id="profile-menu" class="profile-dropdown-menu" role="menu" tabindex="-1">
+              <li role="none"><a href="login.html" role="menuitem">Login</a></li>
+              <li role="none"><a href="register.html" role="menuitem">Register</a></li>
+              <li role="none"><a href="profile.html" role="menuitem">My Profile</a></li>
+              <li role="none"><a href="basket.html" role="menuitem">Basket</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <!-- BLOCK: content -->
+    <section class="contact-hero" aria-label="Contact VMSmartHomes">
+      <div class="container hero-content">
+        <h1>Contact Us</h1>
+        <article class="contact-info-top">
+          <p><i class="fa fa-envelope about-icon-grey"></i> Email: <a href="mailto:info@vmsmarthomes.com">info@vmsmarthomes.com</a></p>
+          <p><i class="fa fa-phone about-icon-grey"></i> Phone: <a href="tel:+359888123456">+359 888 123 456</a></p>
+        </article>
+      </div>
+    </section>
+    <section class="contact-form-section" aria-label="Contact form">
+      <div class="container">
+        <form class="contact-form modern-form" novalidate>
+          <div class="form-card">
+            <div class="form-group">
+              <label for="name">Name<span aria-hidden="true">*</span></label>
+              <div class="input-icon-group">
+                <span class="input-icon"><i class="fa fa-user"></i></span>
+                <input type="text" id="name" name="name" required autocomplete="name">
+              </div>
+              <div class="error" aria-live="polite"></div>
+            </div>
+            <div class="form-group">
+              <label>Type<span aria-hidden="true">*</span></label>
+              <div class="designer-radio-group" role="radiogroup" aria-label="Type">
+                <label class="designer-radio">
+                  <input type="radio" name="type" value="home" required>
+                  <span class="designer-radio-custom"></span>
+                  Home
+                </label>
+                <label class="designer-radio">
+                  <input type="radio" name="type" value="business" required>
+                  <span class="designer-radio-custom"></span>
+                  Business
+                </label>
+              </div>
+              <div class="error" aria-live="polite"></div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email<span aria-hidden="true">*</span></label>
+              <div class="input-icon-group">
+                <span class="input-icon"><i class="fa fa-envelope"></i></span>
+                <input type="email" id="email" name="email" required autocomplete="email">
+              </div>
+              <div class="error" aria-live="polite"></div>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone (optional)</label>
+              <div class="input-icon-group">
+                <span class="input-icon"><i class="fa fa-phone"></i></span>
+                <input type="tel" id="phone" name="phone" autocomplete="tel">
+              </div>
+              <div class="error" aria-live="polite"></div>
+            </div>
+            <div class="form-group">
+              <label for="message">Additional Information - Message<span aria-hidden="true">*</span></label>
+              <div class="input-icon-group">
+                <span class="input-icon"><i class="fa fa-comment"></i></span>
+                <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+              <div class="error" aria-live="polite"></div>
+            </div>
+            <div class="form-group">
+              <label for="plan">Architectural Plan (PDF only)</label>
+              <div class="input-icon-group">
+                <span class="input-icon"><i class="fa fa-file-pdf"></i></span>
+                <input type="file" id="plan" name="plan" accept="application/pdf" aria-label="Architectural Plan (PDF)">
+              </div>
+              <div class="error" aria-live="polite"></div>
+            </div>
+            <button type="submit" class="btn btn-primary form-submit-btn"><i class="fa fa-paper-plane"></i> Send Message</button>
+            <div class="form-status" aria-live="polite"></div>
+          </div>
+        </form>
+        <!--
+        Example for future Django REST integration:
+        async function postContact(data){
+          const res = await fetch(`${API_BASE_URL}/api/contact/`, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(data) });
+          const json = await res.json();
+          // handle json
+        }
+        -->
+      </div>
+    </section>
+    <section class="contact-map-section">
+      <div class="container">
+        <h2>Our Location</h2>
+        <iframe title="VMSmartHomes Plovdiv Location" src="https://www.google.com/maps?q=Plovdiv,+Bulgaria&output=embed" width="100%" height="320" style="border:0; border-radius:12px; margin-top:1.5rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+    <!-- END BLOCK: content -->
+  </main>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-flex">
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="for-home.html">For Home</a></li>
+          <li><a href="for-business.html">For Business</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube" class="social-icon"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <small>© 2025 VMSmartHomes - All Rights Reserved | <a href="#">Privacy</a> | <a href="#">Terms of Use</a></small>
+    </div>
+  </footer>
+</body>
+</html>

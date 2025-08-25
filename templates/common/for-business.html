@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Business | VMSmartHomes</title>
+  <meta name="description" content="Smart automation for offices, hotels, and businesses. Access control, energy savings, and monitoring by VMSmartHomes.">
+  <link rel="canonical" href="/for-business.html">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script defer src="app.js"></script>
+  <!--
+    In Django, this will become base.html.
+    This page will use: {% extends "base.html" %} and {% block content %}...{% endblock %}
+  -->
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header class="site-header" role="banner">
+    <div class="container header-flex">
+      <a href="index.html" class="logo" aria-label="VMSmartHomes Home">VMSmartHomes</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Open navigation menu">
+          <span class="burger" aria-hidden="true"></span>
+        </button>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="for-home.html">For Home</a></li>
+          <li><a href="for-business.html">For Business</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="nav-profile-dropdown">
+            <span class="profile-btn" aria-haspopup="true" aria-expanded="false" aria-controls="profile-menu" tabindex="0">
+              Profile <span class="dropdown-caret">▼</span>
+              <button class="profile-dropdown-toggle" aria-label="Toggle profile menu" tabindex="-1" aria-controls="profile-menu" aria-expanded="false">▾</button>
+            </span>
+            <ul id="profile-menu" class="profile-dropdown-menu" role="menu" tabindex="-1">
+              <li role="none"><a href="login.html" role="menuitem">Login</a></li>
+              <li role="none"><a href="register.html" role="menuitem">Register</a></li>
+              <li role="none"><a href="profile.html" role="menuitem">My Profile</a></li>
+              <li role="none"><a href="basket.html" role="menuitem">Basket</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <!-- BLOCK: content -->
+    <section class="forbiz-hero" aria-label="For Business">
+      <div class="container hero-content">
+        <h1>Smart Solutions for Business</h1>
+        <p>Empower your office, hotel, or business with intelligent automation and control.</p>
+      </div>
+    </section>
+    <section class="featured-business-cases">
+      <div class="container">
+        <h2>Featured Business Use-Cases</h2>
+        <div class="featured-cards-grid">
+          <a href="solutions.html#security" class="featured-card">
+            <span class="featured-icon">🔒</span>
+            <h3>Access Control</h3>
+            <p>Manage entry and security for staff and guests with smart credentials.</p>
+          </a>
+          <a href="solutions.html#energy" class="featured-card">
+            <span class="featured-icon">⚡</span>
+            <h3>Energy Savings</h3>
+            <p>Automate lighting, HVAC, and devices to reduce costs and impact.</p>
+          </a>
+          <a href="solutions.html#logic" class="featured-card">
+            <span class="featured-icon">📊</span>
+            <h3>Monitoring &amp; Dashboards</h3>
+            <p>Real-time monitoring and analytics for safety and efficiency.</p>
+          </a>
+          <a href="solutions.html#logic" class="featured-card">
+            <span class="featured-icon">🌐</span>
+            <h3>Multi-site Administration</h3>
+            <p>Centralized management for multiple locations and teams.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="forbiz-usecases" aria-labelledby="usecases-title">
+      <div class="container">
+        <h2 id="usecases-title">Business Use Cases</h2>
+        <div class="usecases-grid">
+          <article class="usecase-card">
+            <img src="images/access.jpg" alt="Smart access control panel" width="180" height="120" style="aspect-ratio:3/2;">
+            <h3>Access Control</h3>
+            <p>Manage entry and security for staff and guests with smart locks and credentials.</p>
+          </article>
+          <article class="usecase-card">
+            <img src="images/energybiz.jpg" alt="Energy dashboard in an office" width="180" height="120" style="aspect-ratio:3/2;">
+            <h3>Energy Savings</h3>
+            <p>Automate lighting, HVAC, and devices to reduce costs and environmental impact.</p>
+          </article>
+          <article class="usecase-card">
+            <img src="images/monitoring.jpg" alt="Business monitoring dashboard" width="180" height="120" style="aspect-ratio:3/2;">
+            <h3>Monitoring</h3>
+            <p>Real-time monitoring and alerts for safety, comfort, and efficiency.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- END BLOCK: content -->
+  </main>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-flex">
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="for-home.html">For Home</a></li>
+          <li><a href="for-business.html">For Business</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube" class="social-icon"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <small>© 2025 VMSmartHomes - All Rights Reserved | <a href="#">Privacy</a> | <a href="#">Terms of Use</a></small>
+    </div>
+  </footer>
+</body>
+</html>

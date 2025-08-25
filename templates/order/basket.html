@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basket | VMSmartHomes</title>
+  <meta name="description" content="View your basket and proceed to payment.">
+  <link rel="canonical" href="/basket.html">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header class="site-header" role="banner">
+    <div class="container header-flex">
+      <a href="index.html" class="logo" aria-label="VMSmartHomes Home">VMSmartHomes</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Open navigation menu">
+          <span class="burger" aria-hidden="true"></span>
+        </button>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="for-home.html">For Home</a></li>
+          <li><a href="for-business.html">For Business</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="nav-profile-dropdown">
+            <span class="profile-btn" aria-haspopup="true" aria-expanded="false" aria-controls="profile-menu" tabindex="0">
+              Profile <span class="dropdown-caret">▼</span>
+              <button class="profile-dropdown-toggle" aria-label="Toggle profile menu" tabindex="-1" aria-controls="profile-menu" aria-expanded="false">▾</button>
+            </span>
+            <ul id="profile-menu" class="profile-dropdown-menu" role="menu" tabindex="-1">
+              <li role="none"><a href="login.html" role="menuitem">Login</a></li>
+              <li role="none"><a href="register.html" role="menuitem">Register</a></li>
+              <li role="none"><a href="profile.html" role="menuitem">My Profile</a></li>
+              <li role="none"><a href="basket.html" role="menuitem">Basket</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <section class="basket-section">
+      <div class="container">
+        <h1>My Basket</h1>
+        <table class="basket-table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="images/product1.jpg" alt="Smart Hub" width="60" height="45"></td>
+              <td>Smart Hub</td>
+              <td>€129</td>
+              <td>1</td>
+              <td>€129</td>
+            </tr>
+            <tr>
+              <td><img src="images/product4.jpg" alt="Smart Lighting" width="60" height="45"></td>
+              <td>Smart Lighting</td>
+              <td>€39</td>
+              <td>2</td>
+              <td>€78</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="4" style="text-align:right;"><strong>Total:</strong></td>
+              <td><strong>€207</strong></td>
+            </tr>
+          </tfoot>
+        </table>
+        <div style="text-align:right; margin-top:2rem;">
+          <a href="payment.html" class="btn btn-primary">Proceed to Payment</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-flex">
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="for-home.html">For Home</a></li>
+          <li><a href="for-business.html">For Business</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube" class="social-icon"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <small>© 2025 VMSmartHomes - All Rights Reserved | <a href="#">Privacy</a> | <a href="#">Terms of Use</a></small>
+    </div>
+  </footer>
+</body>
+</html>
+

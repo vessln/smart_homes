@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VMSmartHomes | Smart Home Automation for Everyone</title>
+  <meta name="description" content="Transform your home or business with VMSmartHomes. Smart automation, seamless integrations, and expert support.">
+  <link rel="canonical" href="/index.html">
+  <!-- Open Graph -->
+  <meta property="og:title" content="VMSmartHomes | Smart Home Automation for Everyone">
+  <meta property="og:description" content="Transform your home or business with VMSmartHomes. Smart automation, seamless integrations, and expert support.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/index.html">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script defer src="app.js"></script>
+  <!--
+    In Django, this will become base.html.
+    Other pages will use: {% extends "base.html" %} and {% block content %}...{% endblock %}
+  -->
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header class="site-header" role="banner">
+    <div class="container header-flex">
+      <a href="index.html" class="logo" aria-label="VMSmartHomes Home">VMSmartHomes</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Open navigation menu">
+          <span class="burger" aria-hidden="true"></span>
+        </button>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="for-home.html">For Home</a></li>
+          <li><a href="for-business.html">For Business</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="nav-profile-dropdown">
+            <span class="profile-btn" aria-haspopup="true" aria-expanded="false" aria-controls="profile-menu" tabindex="0">
+              Profile <span class="dropdown-caret">▼</span>
+              <button class="profile-dropdown-toggle" aria-label="Toggle profile menu" tabindex="-1" aria-controls="profile-menu" aria-expanded="false">▾</button>
+            </span>
+            <ul id="profile-menu" class="profile-dropdown-menu" role="menu" tabindex="-1">
+              <li role="none"><a href="login.html" role="menuitem">Login</a></li>
+              <li role="none"><a href="register.html" role="menuitem">Register</a></li>
+              <li role="none"><a href="profile.html" role="menuitem">My Profile</a></li>
+              <li role="none"><a href="basket.html" role="menuitem">Basket</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <!-- BLOCK: content -->
+    <!-- HERO SECTION -->
+    <section class="hero" aria-label="Hero">
+      <div class="container hero-content">
+        <h1>Smarter Living, Effortless Control</h1>
+        <p class="hero-sub">Empowering homes and businesses with seamless smart automation.</p>
+        <div class="hero-ctas">
+          <a href="solutions.html" class="btn btn-secondary">See Solutions</a>
+        </div>
+      </div>
+      <div class="hero-bg" aria-hidden="true"></div>
+    </section>
+
+    <!-- OUR IMPACT SECTION -->
+    <section class="impact" aria-labelledby="impact-title">
+      <div class="container">
+        <h2 id="impact-title">Our Impact</h2>
+        <div class="impact-cards designer-impact-cards">
+          <article class="impact-card impact-card-left">
+            <div class="impact-desc">
+              <h3>Greenfield Residence</h3>
+              <p>Now a smart home thanks to VMSmartHomes.</p>
+              <a href="#" class="card-link">View details</a>
+            </div>
+            <img src="images/house1.jpg" alt="Modern smart home exterior" width="320" height="200" loading="lazy" style="aspect-ratio:16/10;">
+          </article>
+          <article class="impact-card impact-card-right">
+            <img src="images/house2.jpg" alt="Family in a smart living room" width="320" height="200" loading="lazy" style="aspect-ratio:16/10;">
+            <div class="impact-desc">
+              <h3>Lakeview Villa</h3>
+              <p>Now a smart home thanks to VMSmartHomes.</p>
+              <a href="#" class="card-link">View details</a>
+            </div>
+          </article>
+          <article class="impact-card impact-card-left">
+            <div class="impact-desc">
+              <h3>Urban Loft</h3>
+              <p>Now a smart home thanks to VMSmartHomes.</p>
+              <a href="#" class="card-link">View details</a>
+            </div>
+            <img src="images/house3.jpg" alt="Smart kitchen with connected devices" width="320" height="200" loading="lazy" style="aspect-ratio:16/10;">
+          </article>
+          <article class="impact-card impact-card-right">
+            <img src="images/hotel.jpg" alt="Modern business hotel lobby" width="320" height="200" loading="lazy" style="aspect-ratio:16/10;">
+            <div class="impact-desc">
+              <h3>City Business Hotel</h3>
+              <p>Now a smart building thanks to VMSmartHomes.</p>
+              <a href="#" class="card-link">View details</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTEGRATIONS SECTION -->
+    <section class="integrations" aria-labelledby="integrations-title">
+      <div class="container">
+        <h2 id="integrations-title">Transform your devices into a smart home system</h2>
+        <!--
+          In Django, this logo wall will be fetched from /api/integrations/.
+        -->
+        <div class="logo-wall">
+          <!-- 5 companies per row, next 5 in second row -->
+          <img src="images/zigbee.svg" alt="Zigbee" width="64" height="64" loading="lazy">
+          <img src="images/zwave.svg" alt="Z-Wave" width="64" height="64" loading="lazy">
+          <img src="images/matter.svg" alt="Matter" width="64" height="64" loading="lazy">
+          <img src="images/hue.svg" alt="Philips Hue" width="64" height="64" loading="lazy">
+          <img src="images/sonos.svg" alt="Sonos" width="64" height="64" loading="lazy">
+          <img src="images/bosch.svg" alt="Bosch" width="64" height="64" loading="lazy">
+          <img src="images/nest.svg" alt="Nest" width="64" height="64" loading="lazy">
+          <img src="images/alexa.svg" alt="Alexa" width="64" height="64" loading="lazy">
+          <img src="images/googlehome.svg" alt="Google Home" width="64" height="64" loading="lazy">
+          <img src="images/applehome.svg" alt="Apple Home" width="64" height="64" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS SECTION -->
+    <section class="how-it-works" aria-labelledby="how-title">
+      <div class="container">
+        <h2 id="how-title">How It Works</h2>
+        <div class="how-steps-modern">
+          <div class="how-step">
+            <div class="how-icon" aria-hidden="true">📝</div>
+            <h3>Survey</h3>
+            <p>We assess your needs and space for the perfect smart setup.</p>
+          </div>
+          <div class="how-step">
+            <div class="how-icon" aria-hidden="true">🔧</div>
+            <h3>Install</h3>
+            <p>Our experts install and configure your smart devices.</p>
+          </div>
+          <div class="how-step">
+            <div class="how-icon" aria-hidden="true">🤖</div>
+            <h3>Automations</h3>
+            <p>Personalized automations make your life easier and safer.</p>
+          </div>
+          <div class="how-step">
+            <div class="how-icon" aria-hidden="true">💬</div>
+            <h3>Support</h3>
+            <p>Ongoing support and updates keep everything running smoothly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS CAROUSEL SECTION -->
+    <section class="testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <h2 id="testimonials-title">What Our Customers Say</h2>
+        <div class="testimonials-carousel" role="region" aria-label="Testimonials" tabindex="0" aria-orientation="horizontal">
+          <button class="carousel-btn prev" aria-label="Previous testimonial">&lt;</button>
+          <ul class="carousel-list">
+            <li class="carousel-item" aria-label="Testimonial 1">
+              <blockquote>
+                <p>“VMSmartHomes made our home so much more comfortable and secure. The installation was a breeze!”</p>
+                <footer>— Alex P.</footer>
+              </blockquote>
+            </li>
+            <li class="carousel-item" aria-label="Testimonial 2">
+              <blockquote>
+                <p>“The automations just work. I love controlling everything from my phone!”</p>
+                <footer>— Priya S.</footer>
+              </blockquote>
+            </li>
+            <li class="carousel-item" aria-label="Testimonial 3">
+              <blockquote>
+                <p>“Our hotel guests rave about the smart rooms. Support is always responsive.”</p>
+                <footer>— Hotel Manager</footer>
+              </blockquote>
+            </li>
+            <li class="carousel-item" aria-label="Testimonial 4">
+              <blockquote>
+                <p>“Energy savings and peace of mind. Highly recommend!”</p>
+                <footer>— The Martins</footer>
+              </blockquote>
+            </li>
+          </ul>
+          <button class="carousel-btn next" aria-label="Next testimonial">&gt;</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING PREVIEW SECTION -->
+    <section class="pricing" aria-labelledby="pricing-title">
+      <div class="container">
+        <h2 id="pricing-title">Plans for Every Need</h2>
+        <div class="pricing-tiers">
+          <div class="pricing-card">
+            <h3>Starter</h3>
+            <ul>
+              <li>Basic automations</li>
+              <li>Up to 10 devices</li>
+              <li>Email support</li>
+            </ul>
+          </div>
+          <div class="pricing-card">
+            <h3>Pro</h3>
+            <ul>
+              <li>Advanced automations</li>
+              <li>Up to 30 devices</li>
+              <li>Priority support</li>
+            </ul>
+          </div>
+          <div class="pricing-card">
+            <h3>Business</h3>
+            <ul>
+              <li>Custom integrations</li>
+              <li>Unlimited devices</li>
+              <li>Dedicated manager</li>
+            </ul>
+          </div>
+        </div>
+        <div class="pricing-cta" style="text-align:center; margin-top:1.5rem;">
+          <a href="contact.html" class="btn btn-primary">Contact Us</a>
+        </div>
+      </div>
+    </section>
+    <!-- END BLOCK: content -->
+  </main>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-flex">
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="for-home.html">For Home</a></li>
+          <li><a href="for-business.html">For Business</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube" class="social-icon"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <small>© 2025 VMSmartHomes - All Rights Reserved | <a href="#">Privacy</a> | <a href="#">Terms of Use</a></small>
+    </div>
+  </footer>
+</body>
+</html>

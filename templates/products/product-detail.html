@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details | VMSmartHomes</title>
+  <meta name="description" content="Product details for VMSmartHomes smart devices.">
+  <link rel="canonical" href="/product-detail.html">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header class="site-header" role="banner">
+    <div class="container header-flex">
+      <a href="index.html" class="logo" aria-label="VMSmartHomes Home">VMSmartHomes</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Open navigation menu">
+          <span class="burger" aria-hidden="true"></span>
+        </button>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="for-home.html">For Home</a></li>
+          <li><a href="for-business.html">For Business</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="nav-profile-dropdown">
+            <button class="profile-btn" aria-haspopup="true" aria-expanded="false" aria-controls="profile-menu">
+              <i class="fa fa-user-circle"></i> Profile <span class="dropdown-caret">▼</span>
+            </button>
+            <ul id="profile-menu" class="profile-dropdown-menu" hidden>
+              <li><a href="login.html">Login</a></li>
+              <li><a href="register.html">Register</a></li>
+              <li><a href="profile.html">My Profile</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="index.html">Home</a> &rsaquo; <a href="products.html">Products</a> &rsaquo; <span>Smart Hub</span>
+    </nav>
+    <section class="product-detail-hero">
+      <div class="container product-detail-flex">
+        <img src="images/product1.jpg" alt="Smart Hub" width="320" height="240" class="product-detail-img">
+        <div class="product-detail-info">
+          <h1>Smart Hub</h1>
+          <div class="price">€129</div>
+          <div class="product-type">Type: Hubs &amp; Controllers</div>
+          <p class="product-desc">Central control for all your smart devices, secure and reliable. Supports Zigbee, Z-Wave, and Wi-Fi. Compatible with Alexa and Google Home.</p>
+          <div class="product-actions">
+            <button class="btn btn-primary">Add to Basket</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="related-products">
+      <div class="container">
+        <h2>Related Products</h2>
+        <div class="product-grid">
+          <article class="product-card">
+            <img src="images/product5.jpg" alt="Smart Door Lock" width="220" height="165">
+            <h2>Smart Door Lock</h2>
+            <div class="price">€99</div>
+            <div class="card-actions">
+              <a href="product-detail.html?sku=LOCK001" class="btn">View details</a>
+            </div>
+          </article>
+          <article class="product-card">
+            <img src="images/product6.jpg" alt="Energy Monitor" width="220" height="165">
+            <h2>Energy Monitor</h2>
+            <div class="price">€49</div>
+            <div class="card-actions">
+              <a href="product-detail.html?sku=ENERGY001" class="btn">View details</a>
+            </div>
+          </article>
+          <article class="product-card">
+            <img src="images/product2.jpg" alt="Smart Thermostat" width="220" height="165">
+            <h2>Smart Thermostat</h2>
+            <div class="price">€89</div>
+            <div class="card-actions">
+              <a href="product-detail.html?sku=THERM001" class="btn">View details</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-flex">
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="for-home.html">For Home</a></li>
+          <li><a href="for-business.html">For Business</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube" class="social-icon"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <small>© 2025 VMSmartHomes - All Rights Reserved | <a href="#">Privacy</a> | <a href="#">Terms of Use</a></small>
+    </div>
+  </footer>
+</body>
+</html>

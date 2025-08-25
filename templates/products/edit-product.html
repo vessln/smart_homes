@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Product | VMSmartHomes</title>
+  <meta name="description" content="Edit a product in VMSmartHomes.">
+  <link rel="canonical" href="/edit-product.html">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header class="site-header" role="banner">
+    <div class="container header-flex">
+      <a href="index.html" class="logo" aria-label="VMSmartHomes Home">VMSmartHomes</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Open navigation menu">
+          <span class="burger" aria-hidden="true"></span>
+        </button>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="for-home.html">For Home</a></li>
+          <li><a href="for-business.html">For Business</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="nav-profile-dropdown">
+            <a href="#" class="profile-btn" aria-haspopup="true" aria-expanded="false" aria-controls="profile-menu">
+              <i class="fa fa-user-circle"></i> Profile <span class="dropdown-caret">▼</span>
+            </a>
+            <ul id="profile-menu" class="profile-dropdown-menu" tabindex="-1">
+              <li><a href="login.html">Login</a></li>
+              <li><a href="register.html">Register</a></li>
+              <li><a href="profile.html">My Profile</a></li>
+              <li><a href="basket.html">Basket</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <section class="edit-product-section">
+      <div class="container">
+        <h1>Edit Product</h1>
+        <form class="modern-form form-card" enctype="multipart/form-data">
+          <div class="form-group">
+            <label for="product-name">Name</label>
+            <input type="text" id="product-name" name="product-name" value="Smart Hub" required>
+          </div>
+          <div class="form-group">
+            <label for="product-price">Price (EUR)</label>
+            <input type="number" id="product-price" name="product-price" min="0" step="0.01" value="129" required>
+          </div>
+          <div class="form-group">
+            <label for="product-category">Category</label>
+            <select id="product-category" name="product-category" required>
+              <option value="">Select...</option>
+              <option value="lighting">Lighting</option>
+              <option value="hvac">HVAC</option>
+              <option value="shading">Shading</option>
+              <option value="security">Security</option>
+              <option value="multimedia">Multimedia &amp; Audio</option>
+              <option value="energy">Energy &amp; Power</option>
+              <option value="hubs" selected>Hubs &amp; Controllers</option>
+              <option value="accessories">Accessories</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="product-image">Image</label>
+            <input type="file" id="product-image" name="product-image" accept="image/*">
+          </div>
+          <div class="form-group">
+            <label for="product-desc">Description</label>
+            <textarea id="product-desc" name="product-desc" rows="4" required>Central control for all your smart devices, secure and reliable. Supports Zigbee, Z-Wave, and Wi-Fi. Compatible with Alexa and Google Home.</textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Save Changes</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-flex">
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="for-home.html">For Home</a></li>
+          <li><a href="for-business.html">For Business</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube" class="social-icon"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <small>© 2025 VMSmartHomes - All Rights Reserved | <a href="#">Privacy</a> | <a href="#">Terms of Use</a></small>
+    </div>
+  </footer>
+</body>
+</html>
