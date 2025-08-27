@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 
     "rest_framework",
+    "django_filters",
 
     "smart_homes.common",
     "smart_homes.account",
@@ -114,10 +115,10 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 # STATIC_ROOT = BASE_DIR / "staticfiles"   # for collectstatic (in prod)
 
 # directory where uploaded files will be stored
-# MEDIA_ROOT = BASE_DIR / "mediafiles"
+MEDIA_ROOT = BASE_DIR / "mediafiles"
 
 # url prefix to serve uploaded files
-# MEDIA_URL = "/media/"
+MEDIA_URL = "/media/"
 
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
