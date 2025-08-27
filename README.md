@@ -13,8 +13,8 @@ Full stack project for Smart Homes web platform.
 
 ## 🧰 Technical stack:
 - **Backend:** Django 5, Django REST Framework.
-- **Frontend:** HTML5, CSS3, JS, Django templates.
-- **DB:** SQLite (dev) / Postgres (prod).
+- **Frontend:** HTML5, CSS3, JS.
+- **DB:** SQLite (dev) / PostgreSQL (prod).
 
 ---
 
