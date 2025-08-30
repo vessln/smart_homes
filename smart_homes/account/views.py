@@ -2,7 +2,7 @@ from django.contrib.auth import views as auth_views, get_user_model, login, logo
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views import generic as generic_views
-from django.shortcuts import redirect, render
+from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from django.contrib import messages
 from smart_homes.account.forms import LoginUserForm, RegisterUserForm
@@ -37,3 +37,4 @@ def logout_user(request):
 class ProfileUserView(LoginRequiredMixin, generic_views.DetailView):
     model = UserModel
     template_name = "account/profile.html"
+    context_object_name = "user_object"
