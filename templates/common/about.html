@@ -1,127 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | VMSmartHomes</title>
-  <meta name="description" content="Learn about the mission, values, and team behind VMSmartHomes.">
-  <link rel="canonical" href="/about.html">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script defer src="app.js"></script>
-  <!--
-    In Django, this will become base.html.
-    This page will use: {% extends "base.html" %} and {% block content %}...{% endblock %}
-  -->
-</head>
-<body>
-  <a href="#main" class="skip-link">Skip to main content</a>
-  <header class="site-header" role="banner">
-    <div class="container header-flex">
-      <a href="index.html" class="logo" aria-label="VMSmartHomes Home">VMSmartHomes</a>
-      <nav class="main-nav" aria-label="Main navigation">
-        <button class="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Open navigation menu">
-          <span class="burger" aria-hidden="true"></span>
-        </button>
-        <ul id="nav-menu" class="nav-menu">
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="for-home.html">For Home</a></li>
-          <li><a href="for-business.html">For Business</a></li>
-          <li><a href="solutions.html">Solutions</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li class="nav-profile-dropdown">
-            <span class="profile-btn" aria-haspopup="true" aria-expanded="false" aria-controls="profile-menu" tabindex="0">
-              Profile <span class="dropdown-caret">▼</span>
-              <button class="profile-dropdown-toggle" aria-label="Toggle profile menu" tabindex="-1" aria-controls="profile-menu" aria-expanded="false">▾</button>
-            </span>
-            <ul id="profile-menu" class="profile-dropdown-menu" role="menu" tabindex="-1">
-              <li role="none"><a href="login.html" role="menuitem">Login</a></li>
-              <li role="none"><a href="register.html" role="menuitem">Register</a></li>
-              <li role="none"><a href="profile.html" role="menuitem">My Profile</a></li>
-              <li role="none"><a href="basket.html" role="menuitem">Basket</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main id="main" tabindex="-1">
-    <section class="about-hero" aria-label="About VMSmartHomes">
-      <div class="container hero-content">
-        <h1>About VMSmartHomes</h1>
-      </div>
-    </section>
-    <section class="about-smarthome">
-      <div class="container">
-        <h2><i class="fa fa-house about-icon-grey" aria-hidden="true"></i> What is a Smart Home?</h2>
-        <p>A smart home uses connected devices and automation to make daily life more comfortable, secure, and energy-efficient. With VMSmartHomes, you can control lighting, climate, security, and more from anywhere, at any time.</p>
-      </div>
-    </section>
-    <section class="about-mission">
-      <div class="container">
-        <h2><i class="fa fa-bullseye about-icon-grey" aria-hidden="true"></i> Our Mission</h2>
-        <p>Empowering homes and businesses with seamless smart automation, making smart living accessible, secure, and effortless for everyone.</p>
-      </div>
-    </section>
-    <section class="about-values" aria-labelledby="values-title">
-      <div class="container">
-        <h2 id="values-title">Our Values</h2>
-        <ul class="values-list">
-          <li>Innovation with purpose</li>
-          <li>Customer-first support</li>
-          <li>Privacy and security</li>
-          <li>Sustainability and eco-friendly</li>
-          <li>Simplicity in every experience</li>
-        </ul>
-      </div>
-    </section>
-    <section class="about-team" aria-labelledby="team-title">
-      <div class="container">
-        <h2 id="team-title"><i class="fa fa-users about-icon-grey" aria-hidden="true"></i> Meet the Team</h2>
-        <div class="team-grid">
-          <article class="team-card">
-            <img src="images/team1.jpg" alt="Team member: Martin, CTO" width="120" height="120" style="aspect-ratio:1/1;">
-            <h3>Martin Nova</h3>
-            <p>CTO &amp; Co-Founder</p>
-          </article>
-          <article class="team-card">
-            <img src="images/team2.jpg" alt="Team member: Julia, CEO" width="120" height="120" style="aspect-ratio:1/1;">
-            <h3>Julia Ker</h3>
-            <p>CEO &amp; Co-Founder</p>
-          </article>
-          <article class="team-card">
-            <img src="images/team4.jpg" alt="Team member: Morgan, Product" width="120" height="120" style="aspect-ratio:1/1;">
-            <h3>Morgan Kim</h3>
-            <p>Product Lead</p>
-          </article>
-        </div>
-      </div>
-    </section>
-    <!-- END BLOCK: content -->
-  </main>
-  <footer class="site-footer" role="contentinfo">
-    <div class="container footer-flex">
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="for-home.html">For Home</a></li>
-          <li><a href="for-business.html">For Business</a></li>
-          <li><a href="solutions.html">Solutions</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="footer-social">
-        <a href="#" aria-label="Facebook" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="YouTube" class="social-icon"><i class="fab fa-youtube"></i></a>
-      </div>
-    </div>
-    <div class="footer-legal">
-      <small>© 2025 VMSmartHomes - All Rights Reserved | <a href="#">Privacy</a> | <a href="#">Terms of Use</a></small>
-    </div>
-  </footer>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}About | VMSmartHomes{% endblock %}
+
+{% block main_content %}
+
+    <main id="main" tabindex="-1">
+        <section class="about-hero" aria-label="About VMSmartHomes">
+            <div class="container hero-content">
+                <h1>About Us</h1>
+            </div>
+        </section>
+        <section class="about-smarthome">
+            <div class="container">
+                <h2><i class="fa fa-house about-icon-grey" aria-hidden="true"></i> What is a Smart Home?</h2>
+                <p>A smart home uses connected devices and automation to make daily life more comfortable, secure, and energy-efficient. With VMSmartHomes, you can control lighting, climate, security, and more from anywhere, at any time.</p>
+            </div>
+        </section>
+        <section class="about-mission">
+            <div class="container">
+                <h2><i class="fa fa-bullseye about-icon-grey" aria-hidden="true"></i> Our Mission</h2>
+                <p>Empowering homes and businesses with seamless smart automation, making smart living accessible, secure, and effortless for everyone.</p>
+            </div>
+        </section>
+        <section class="about-values" aria-labelledby="values-title">
+            <div class="container">
+                <h2 id="values-title">Our Values</h2>
+                <ul class="values-list">
+                    <li>Innovation with purpose</li>
+                    <li>Customer-first support</li>
+                    <li>Privacy and security</li>
+                    <li>Sustainability and eco-friendly</li>
+                    <li>Simplicity in every experience</li>
+                </ul>
+            </div>
+        </section>
+        <section class="about-team" aria-labelledby="team-title">
+            <div class="container">
+                <h2 id="team-title"><i class="fa fa-users about-icon-grey" aria-hidden="true"></i> Meet the Team</h2>
+                <div class="team-grid">
+                    <article class="team-card">
+                        <img src="{% static 'images/martin.jpg' %}" alt="Team member: Martin, CTO" width="120" height="120" style="aspect-ratio:1/1;">
+                        <h3>Martin Nova</h3>
+                        <p>CTO &amp; Co-Founder</p>
+                    </article>
+                    <article class="team-card">
+                        <img src="{% static 'images/julia.jpg' %}" alt="Team member: Julia, CEO" width="120" height="120" style="aspect-ratio:1/1;">
+                        <h3>Julia Ker</h3>
+                        <p>CEO &amp; Co-Founder</p>
+                    </article>
+                    <article class="team-card">
+                        <img src="{% static 'images/morgan.jpg' %}" alt="Team member: Morgan, Product" width="120" height="120" style="aspect-ratio:1/1;">
+                        <h3>Morgan Kim</h3>
+                        <p>Product Lead</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+{% endblock %}

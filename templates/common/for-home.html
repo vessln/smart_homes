@@ -1,138 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>For Home | VMSmartHomes</title>
-  <meta name="description" content="Smart home automation for lighting, climate, security, and energy. VMSmartHomes for every home.">
-  <link rel="canonical" href="/for-home.html">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script defer src="app.js"></script>
-  <!--
-    In Django, this will become base.html.
-    This page will use: {% extends "base.html" %} and {% block content %}...{% endblock %}
-  -->
-</head>
-<body>
-  <a href="#main" class="skip-link">Skip to main content</a>
-  <header class="site-header" role="banner">
-    <div class="container header-flex">
-      <a href="index.html" class="logo" aria-label="VMSmartHomes Home">VMSmartHomes</a>
-      <nav class="main-nav" aria-label="Main navigation">
-        <button class="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Open navigation menu">
-          <span class="burger" aria-hidden="true"></span>
-        </button>
-        <ul id="nav-menu" class="nav-menu">
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="for-home.html">For Home</a></li>
-          <li><a href="for-business.html">For Business</a></li>
-          <li><a href="solutions.html">Solutions</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li class="nav-profile-dropdown">
-            <span class="profile-btn" aria-haspopup="true" aria-expanded="false" aria-controls="profile-menu" tabindex="0">
-              Profile <span class="dropdown-caret">▼</span>
-              <button class="profile-dropdown-toggle" aria-label="Toggle profile menu" tabindex="-1" aria-controls="profile-menu" aria-expanded="false">▾</button>
-            </span>
-            <ul id="profile-menu" class="profile-dropdown-menu" role="menu" tabindex="-1">
-              <li role="none"><a href="login.html" role="menuitem">Login</a></li>
-              <li role="none"><a href="register.html" role="menuitem">Register</a></li>
-              <li role="none"><a href="profile.html" role="menuitem">My Profile</a></li>
-              <li role="none"><a href="basket.html" role="menuitem">Basket</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main id="main" tabindex="-1">
-    <!-- BLOCK: content -->
-    <section class="forhome-hero" aria-label="For Home">
-      <div class="container hero-content">
-        <h1>Smart Home, Smart Living</h1>
-        <p>Discover how VMSmartHomes transforms everyday living with intelligent automation.</p>
-      </div>
-    </section>
-    <section class="featured-home-scenarios">
-      <div class="container">
-        <h2>Featured Home Scenarios</h2>
-        <div class="featured-cards-grid">
-          <a href="solutions.html#lighting" class="featured-card">
-            <span class="featured-icon">💡</span>
-            <h3>Lighting</h3>
-            <p>Personalize and automate your lighting for comfort and security.</p>
-          </a>
-          <a href="solutions.html#hvac" class="featured-card">
-            <span class="featured-icon">🌡️</span>
-            <h3>Climate</h3>
-            <p>Smart heating and AC for perfect comfort and energy savings.</p>
-          </a>
-          <a href="solutions.html#security" class="featured-card">
-            <span class="featured-icon">🔒</span>
-            <h3>Security</h3>
-            <p>Keep your home safe with smart locks, cameras, and sensors.</p>
-          </a>
-          <a href="solutions.html#energy" class="featured-card">
-            <span class="featured-icon">⚡</span>
-            <h3>Energy Monitoring</h3>
-            <p>Track and optimize your energy use for a greener home.</p>
-          </a>
-        </div>
-      </div>
-    </section>
-    <section class="forhome-scenarios" aria-labelledby="scenarios-title">
-      <div class="container">
-        <h2 id="scenarios-title">Home Scenarios</h2>
-        <div class="scenarios-grid">
-          <article class="scenario-card">
-            <img src="images/lighting.jpg" alt="Smart lighting in a living room" width="180" height="120" style="aspect-ratio:3/2;">
-            <h3>Lighting</h3>
-            <p>Automate and personalize your lighting for comfort, security, and energy savings.</p>
-          </article>
-          <article class="scenario-card">
-            <img src="images/climate.jpg" alt="Smart thermostat and climate control" width="180" height="120" style="aspect-ratio:3/2;">
-            <h3>Climate</h3>
-            <p>Control temperature and air quality from anywhere, anytime.</p>
-          </article>
-          <article class="scenario-card">
-            <img src="images/security.jpg" alt="Smart security camera and sensors" width="180" height="120" style="aspect-ratio:3/2;">
-            <h3>Security</h3>
-            <p>Keep your home safe with smart locks, cameras, and real-time alerts.</p>
-          </article>
-          <article class="scenario-card">
-            <img src="images/energy.jpg" alt="Energy dashboard on a tablet" width="180" height="120" style="aspect-ratio:3/2;">
-            <h3>Energy</h3>
-            <p>Monitor and optimize your energy use for a greener, lower-cost home.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-    <!-- END BLOCK: content -->
-  </main>
-  <footer class="site-footer" role="contentinfo">
-    <div class="container footer-flex">
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="for-home.html">For Home</a></li>
-          <li><a href="for-business.html">For Business</a></li>
-          <li><a href="solutions.html">Solutions</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="footer-social">
-        <a href="#" aria-label="Facebook" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="LinkedIn" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#" aria-label="YouTube" class="social-icon"><i class="fab fa-youtube"></i></a>
-      </div>
-    </div>
-    <div class="footer-legal">
-      <small>© 2025 VMSmartHomes - All Rights Reserved | <a href="#">Privacy</a> | <a href="#">Terms of Use</a></small>
-    </div>
-  </footer>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}For Business | VMSmartHomes{% endblock %}
+
+{% block main_content %}
+
+    <main id="main" tabindex="-1">
+        <section class="forhome-hero" aria-label="For Home">
+            <div class="container hero-content">
+                <h1>Smart Home, Smart Living</h1>
+                <p>Discover how VMSmartHomes transforms everyday living with intelligent automation.</p>
+            </div>
+        </section>
+
+        <section class="featured-home-scenarios">
+            <div class="container">
+                <h2>Featured Home Scenarios</h2>
+                <div class="featured-cards-grid">
+                    <a href="solutions.html#lighting" class="featured-card">
+                        <span class="featured-icon"><i class="fa-solid fa-lightbulb"></i></span>
+                        <h3>Lighting</h3>
+                        <p>Personalize and automate your lighting for comfort and security.</p>
+                    </a>
+                    <a href="solutions.html#hvac" class="featured-card">
+                        <span class="featured-icon"><i class="fa-solid fa-temperature-low"></i>️</span>
+                        <h3>Climate</h3>
+                        <p>Smart heating and AC for perfect comfort and energy savings.</p>
+                    </a>
+                    <a href="solutions.html#security" class="featured-card">
+                        <span class="featured-icon"><i class="fa-solid fa-lock"></i></span>
+                        <h3>Security</h3>
+                        <p>Keep your home safe with smart locks, cameras, and sensors.</p>
+                    </a>
+                    <a href="solutions.html#energy" class="featured-card">
+                        <span class="featured-icon"><i class="fa-solid fa-bolt"></i></span>
+                        <h3>Energy Monitoring</h3>
+                        <p>Track and optimize your energy use for a greener home.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="forhome-scenarios" aria-labelledby="scenarios-title">
+            <div class="container">
+                <h2 id="scenarios-title">Home Scenarios</h2>
+                <div class="scenarios-grid">
+                    <article class="scenario-card">
+                        <img src="{% static 'images/smart-lighting.jpg' %}" alt="Smart lighting in a living room" width="180" height="120" style="aspect-ratio:3/2;">
+                        <h3>Lighting</h3>
+                        <p>Automate and personalize your lighting for comfort, security, and energy savings.</p>
+                    </article>
+                    <article class="scenario-card">
+                        <img src="{% static 'images/climate.jpg' %}" alt="Smart thermostat and climate control" width="180" height="120" style="aspect-ratio:3/2;">
+                        <h3>Climate</h3>
+                        <p>Control temperature and air quality from anywhere, anytime.</p>
+                    </article>
+                    <article class="scenario-card">
+                        <img src="{% static 'images/security.jpg' %}" alt="Smart security camera and sensors" width="180" height="120" style="aspect-ratio:3/2;">
+                        <h3>Security</h3>
+                        <p>Keep your home safe with smart locks, cameras and real-time alerts.</p>
+                    </article>
+                    <article class="scenario-card">
+                        <img src="{% static 'images/monitoring.jpg' %}" alt="Energy dashboard on a tablet" width="180" height="120" style="aspect-ratio:3/2;">
+                        <h3>Energy</h3>
+                        <p>Monitor and optimize your energy use for a greener, lower-cost home.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+{% endblock %}

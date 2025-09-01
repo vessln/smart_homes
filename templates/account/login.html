@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 {% block title %}Login | VMSmartHomes{% endblock %}
 
 {% block main_content %}
@@ -20,7 +22,7 @@
                     {% if next %}<input type="hidden" name="next" value="{{ next }}">{% endif %}
                     <div class="form-group">
                         <label for="id_username">Username</label>
-                        <input type="text" id="id_username" name="username" required autocomplete="username" value="{{ form.username.value|default_if_empty:'' }}">
+                        <input type="text" id="id_username" name="username" required autocomplete="username" value="{{ form.username.value }}">
                         {% if form.username.errors %}
                             <div class="error" aria-live="polite">{{ form.username.errors|join:", " }}</div>
                         {% endif %}
@@ -37,7 +39,7 @@
                     <button type="submit" class="btn btn-primary">Login</button>
                 </form>
 
-                <p style="margin-top:1.5rem;">Don't have an account? <a href="{% url 'register_user' %}">Register here</a></p>
+                <p style="margin-top:2rem;">Don't have an account? <a href="{% url 'register_user' %}"> Register here.</a></p>
             </div>
         </section>
     </main>

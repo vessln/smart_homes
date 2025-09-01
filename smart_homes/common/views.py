@@ -24,7 +24,7 @@ UserModel = get_user_model()
 class ContactView(FormView):
     template_name = "common/contact.html"
     form_class = ContactForm
-    success_url = reverse_lazy("common:contact")
+    success_url = reverse_lazy("contact")
 
     def form_valid(self, form):
         data = form.cleaned_data
