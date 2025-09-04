@@ -8,7 +8,7 @@ class ContactForm(forms.Form):
     name = forms.CharField(max_length=20)
     type = forms.ChoiceField(choices=TYPE_CHOICES, widget=forms.RadioSelect)
     email = forms.EmailField(required=True)
-    phone = forms.CharField(max_length=40, required=False)
+    phone = forms.CharField(max_length=10, required=True)
     message = forms.CharField(widget=forms.Textarea, min_length=10)
     plan = forms.FileField(required=False)
 

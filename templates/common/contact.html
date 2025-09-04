@@ -20,27 +20,16 @@
 
         <section class="contact-form-section" aria-label="Contact form">
             <div class="container">
-                <form class="contact-form modern-form"
-                      method="post"
-                      action="{% url 'contact' %}"
-                      enctype="multipart/form-data"
-                      novalidate>
+                <form class="contact-form modern-form" method="post" action="{% url 'contact' %}" enctype="multipart/form-data" novalidate>
                     {% csrf_token %}
 
-                    {% if messages %}
-                        <ul class="messages">
-                            {% for m in messages %}
-                                <li class="message {{ m.tags }}">{{ m }}</li>
-                            {% endfor %}
-                        </ul>
-                    {% endif %}
-
                     <div class="form-card">
+                        {{ form.non_field_errors }}
                         <div class="form-group">
-                            <label for="name">Name<span aria-hidden="true">*</span></label>
+                            <label for="{{ form.name.id_for_label }}">Name<span aria-hidden="true">*</span></label>
                             <div class="input-icon-group">
                                 <span class="input-icon"><i class="fa fa-user"></i></span>
-                                <input type="text" id="name" name="name" required autocomplete="name" value="{{ form.name.value }}">
+                                {{ form.name }}
                             </div>
                             {% if form.name.errors %}
                                 <div class="error" aria-live="polite">{{ form.name.errors|join:", " }}</div>
@@ -50,14 +39,7 @@
                         <div class="form-group">
                             <label>Type<span aria-hidden="true">*</span></label>
                             <div class="designer-radio-group" role="radiogroup" aria-label="Type">
-                                <label class="designer-radio">
-                                    <input type="radio" name="type" value="home" required {% if form.type.value == 'home' %}checked{% endif %}>
-                                    <span class="designer-radio-custom"></span> Home
-                                </label>
-                                <label class="designer-radio">
-                                    <input type="radio" name="type" value="business" required {% if form.type.value == 'business' %}checked{% endif %}>
-                                    <span class="designer-radio-custom"></span> Business
-                                </label>
+                                {{ form.type }}
                             </div>
                             {% if form.type.errors %}
                                 <div class="error" aria-live="polite">{{ form.type.errors|join:", " }}</div>
@@ -65,10 +47,10 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="email">Email<span aria-hidden="true">*</span></label>
+                            <label for="{{ form.email.id_for_label }}">Email<span aria-hidden="true">*</span></label>
                             <div class="input-icon-group">
                                 <span class="input-icon"><i class="fa fa-envelope"></i></span>
-                                <input type="email" id="email" name="email" required autocomplete="email" value="{{ form.email.value }}">
+                                {{ form.email }}
                             </div>
                             {% if form.email.errors %}
                                 <div class="error" aria-live="polite">{{ form.email.errors|join:", " }}</div>
@@ -76,10 +58,10 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="phone">Phone<span aria-hidden="true">*</span></label>
+                            <label for="{{ form.phone.id_for_label }}">Phone<span aria-hidden="true">*</span></label>
                             <div class="input-icon-group">
                                 <span class="input-icon"><i class="fa fa-phone"></i></span>
-                                <input type="tel" id="phone" name="phone" autocomplete="tel" value="{{ form.phone.value }}">
+                                {{ form.phone }}
                             </div>
                             {% if form.phone.errors %}
                                 <div class="error" aria-live="polite">{{ form.phone.errors|join:", " }}</div>
@@ -87,10 +69,10 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="message">Message<span aria-hidden="true">*</span></label>
+                            <label for="{{ form.message.id_for_label }}">Message<span aria-hidden="true">*</span></label>
                             <div class="input-icon-group">
                                 <span class="input-icon"><i class="fa fa-comment"></i></span>
-                                <textarea id="message" name="message" rows="5" required>{{ form.message.value }}</textarea>
+                                {{ form.message }}
                             </div>
                             {% if form.message.errors %}
                                 <div class="error" aria-live="polite">{{ form.message.errors|join:", " }}</div>
@@ -98,10 +80,10 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="plan">Architectural Plan (PDF only)</label>
+                            <label for="{{ form.plan.id_for_label }}">Architectural Plan (PDF only)</label>
                             <div class="input-icon-group">
                                 <span class="input-icon"><i class="fa fa-file-pdf"></i></span>
-                                <input type="file" id="plan" name="plan" accept="application/pdf" aria-label="Architectural plan (PDF, up to 8MB)">
+                                {{ form.plan }}
                             </div>
                             {% if form.plan.errors %}
                                 <div class="error" aria-live="polite">{{ form.plan.errors|join:", " }}</div>
@@ -109,7 +91,16 @@
                         </div>
 
                         <button type="submit" class="btn btn-primary form-submit-btn"><i class="fa fa-paper-plane"></i> Send Message</button>
-                        <div class="form-status" aria-live="polite"></div>
+                        <div class="form-status" aria-live="polite">
+                            {% if messages %}
+                                <ul class="messages" style="list-style: none;">
+                                    {% for m in messages %}
+                                        <li class="message {{ m.tags }}">{{ m }}</li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                        </div>
+
                     </div>
                 </form>
             </div>

@@ -611,7 +611,6 @@ h1 {
   box-shadow: 0 4px 16px rgba(30,64,175,0.13);
 }
 
-/* --- Modern Solutions Page --- */
 .modern-nav ul {
   display: flex;
   flex-wrap: wrap;
@@ -1482,6 +1481,25 @@ select:focus, .input-icon-group select:focus {
 .contact-info-top i {
   color: #888;
   font-size: 1.2em;
+}
+
+.form-messages {
+  margin-bottom: 1rem;
+  padding: 10px 10px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.messages {
+  list-style: none;
+  align-items: center;
+
+}
+
+.message {
+  list-style: none;
+  background: var(--color-bg);
+  color:  var(--color-primary);
 }
 
 .modern-form input[type="text"],

@@ -1,14 +1,15 @@
+import base64
+import logging
 from django.contrib.auth import get_user_model
 from django.views.generic.edit import FormView
 from django.contrib import messages
-from django.core.mail import EmailMessage
-from django.urls import reverse_lazy
 from django.conf import settings
-
+import sib_api_v3_sdk
+from sib_api_v3_sdk.rest import ApiException
 from smart_homes.common.forms import ContactForm
 
-UserModel = get_user_model()
 
+# UserModel = get_user_model()
 
 # class HomePageView(generic_views.TemplateView):
 #     template_name = "common/index.html"
@@ -24,34 +25,50 @@ UserModel = get_user_model()
 class ContactView(FormView):
     template_name = "common/contact.html"
     form_class = ContactForm
-    success_url = reverse_lazy("contact")
+    success_url = "/contact/"
 
     def form_valid(self, form):
         data = form.cleaned_data
-        subject = f"[Contact] {data['type'].title()} inquiry from {data['name']}"
-        body = (
-            f"Name: {data['name']}\n"
-            f"Email: {data['email']}\n"
-            f"Phone: {data.get('phone') or '-'}\n"
-            f"Type: {data['type']}\n\n"
-            f"Message:\n{data['message']}"
-        )
-        to_addr = getattr(settings, "CONTACT_TO_EMAIL", None) or settings.DEFAULT_FROM_EMAIL
 
-        email = EmailMessage(
-            subject=subject,
-            body=body,
-            from_email=settings.DEFAULT_FROM_EMAIL,
-            to=[to_addr],
-            reply_to=[data["email"]],
-        )
+        configuration = sib_api_v3_sdk.Configuration()
+        configuration.api_key['api-key'] = settings.BREVO_API_KEY
+        api_instance = sib_api_v3_sdk.TransactionalEmailsApi(sib_api_v3_sdk.ApiClient(configuration))
 
+        attachments = []
         plan = data.get("plan")
         if plan:
-            email.attach(plan.name, plan.read(), "application/pdf")
-            plan.seek(0)
+            try:
+                file_content = plan.read()
+                attachments.append({
+                    "content": base64.b64encode(file_content).decode("utf-8"),
+                    "name": plan.name
+                })
+                plan.seek(0)
+            except Exception as e:
+                messages.error(self.request, f"Error processing file: {str(e)}")
+                return super().form_invalid(form)
 
-        email.send(fail_silently=False)
-        messages.success(self.request, "Thanks! Your message has been sent.")
+        sender_name = "SmartHomes Contact Form"
+        email = sib_api_v3_sdk.SendSmtpEmail(
+            to=[{"email": settings.CONTACT_TO_EMAIL}],
+            sender={"email": settings.CONTACT_TO_EMAIL, "name": sender_name},
+            subject=f"Inquiry from {data['name']} for smart home system.",
+            html_content=f"""
+                <p><strong>Name:</strong> {data['name']}</p>
+                <p><strong>Email:</strong> {data['email']}</p>
+                <p><strong>Phone:</strong> {data.get('phone') or '-'}</p>
+                <p><strong>Type:</strong> {data['type']}</p>
+                <p><strong>Message:</strong><br>{data['message']}</p>
+            """,
+            attachment=attachments if attachments else None
+        )
+
+        try:
+            response = api_instance.send_transac_email(email)
+            messages.success(self.request, "Thank you! We will contact you soon.")
+        except ApiException as e:
+            messages.error(self.request, f"Error sending email: {e.body}")
+            return super().form_invalid(form)
+
         return super().form_valid(form)
 
