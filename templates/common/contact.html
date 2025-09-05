@@ -91,15 +91,6 @@
                         </div>
 
                         <button type="submit" class="btn btn-primary form-submit-btn"><i class="fa fa-paper-plane"></i> Send Message</button>
-                        <div class="form-status" aria-live="polite">
-                            {% if messages %}
-                                <ul class="messages" style="list-style: none;">
-                                    {% for m in messages %}
-                                        <li class="message {{ m.tags }}">{{ m }}</li>
-                                    {% endfor %}
-                                </ul>
-                            {% endif %}
-                        </div>
 
                     </div>
                 </form>

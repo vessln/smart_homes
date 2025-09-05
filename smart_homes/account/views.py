@@ -5,6 +5,7 @@ from django.views import generic as generic_views
 from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from django.contrib import messages
+from django.contrib.messages import views as messages_views
 from smart_homes.account.forms import LoginUserForm, RegisterUserForm
 
 
@@ -18,16 +19,14 @@ class RegisterUserView(generic_views.CreateView):
     def form_valid(self, form):
         response = super().form_valid(form)
         login(self.request, form.instance)
-        messages.success(self.request, "Registration successful. Welcome!")
+        messages.success(self.request, "You were successfully registered. Welcome!")
         return response
 
 
 class LoginUserView(auth_views.LoginView):
     template_name = "account/login.html"
     form_class = LoginUserForm
-
-    def get_success_url(self):
-        return reverse_lazy("home")
+    success_url = reverse_lazy("home")
 
 
 @login_required
@@ -44,3 +43,11 @@ class ProfileUserView(LoginRequiredMixin, generic_views.DetailView):
 
     def get_object(self, queryset=None):
         return self.request.user
+
+
+
+class DeleteUserView(messages_views.SuccessMessageMixin, generic_views.DeleteView):
+    model = UserModel
+    success_message = "The profile was successfully deleted!"
+    template_name = "account/delete.html"
+    success_url = reverse_lazy("home")

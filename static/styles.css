@@ -1499,7 +1499,8 @@ select:focus, .input-icon-group select:focus {
 .message {
   list-style: none;
   background: var(--color-bg);
-  color:  var(--color-primary);
+  color:  var(--color-primary-dark);
+  font-weight: 1.2;
 }
 
 .modern-form input[type="text"],

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Profile | VMSmartHomes{% endblock %}
+
+{% block main_content %}
+
+    <main id="main" tabindex="-1">
+            <section class="delete-hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1>Delete Profile</h1>
+
+                        <div class="confirmation-card">
+                            <form action="{% url 'delete_user' pk=request.user.pk %}" method="post">
+                                <h2>Are you sure you want to delete your profile?</h2>
+                                <p class="confirmation-warning">
+                                    This action will permanently delete your account and all associated data.
+                                    You will lose access to your smart home configurations, order history, and preferences.
+                                </p>
+                                <div class="confirmation-actions">
+                                    <button class="btn btn-danger" id="confirm-delete">Yes, Delete My Profile</button>
+                                    <a href="{% url 'profile' pk=request.user.pk %}" class="btn btn-secondary">No, Keep My Profile</a>
+                                </div>
+                                {% csrf_token %}
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+
+{% endblock %}

@@ -51,6 +51,14 @@
         </div>
     </header>
 
+    <div class="form-status" aria-live="polite">
+        {% if messages %}
+            {% for m in messages %}
+                <li class="message {{ m.tags }}">{{ m }}</li>
+            {% endfor %}
+        {% endif %}
+    </div>
+
     {% block main_content %}
     {% endblock %}
 

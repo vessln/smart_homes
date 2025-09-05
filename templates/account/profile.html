@@ -14,16 +14,13 @@
                     <div class="profile-avatar"><i class="fa fa-user-circle"></i></div>
 
                     <div class="profile-info">
-                        <div><strong>Email:</strong>{{ user_object.email }}</div>
-                        <div><strong>Username:</strong>{{ user_object.username }}</div>
+                        <div><i class="fa fa-user-circle"></i><strong> Username: </strong>{{ user_object.username }}</div>
+                        <div><i class="fa fa-envelope"></i><strong> Email: </strong>{{ user_object.email }}</div>
                     </div>
 
                     <div class="profile-actions">
-                        <a href="{% url 'order:basket' %}" class="btn btn-secondary">View Basket</a>
-                        <form method="post" action="{% url 'logout_user' %}" style="display:inline">
-                            {% csrf_token %}
-                            <button type="submit" class="btn btn-secondary">Logout</button>
-                        </form>
+                        <a href="#order-basket" class="btn btn-secondary">View Basket</a>
+                        <a href="{% url 'delete_user' pk=request.user.pk %}" class="btn btn-secondary">Delete Profile</a>
                     </div>
 
                 </div>
