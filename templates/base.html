@@ -37,7 +37,7 @@
                         </span>
                         <ul id="profile-menu" class="profile-dropdown-menu" role="menu" tabindex="-1">
                             {% if user.is_authenticated %}
-                                <li role="none"><a href="{% url 'profile_user' pk=request.user.pk %}" role="menuitem">My Profile</a></li>
+                                <li role="none"><a href="{% url 'profile' pk=request.user.pk %}" role="menuitem">My Profile</a></li>
                                 <li role="none"><a href="{% url 'logout_user' %}" role="menuitem">Logout</a></li>
 {#                                <li role="none"><a href="{% url 'order:basket' %}" role="menuitem">Basket</a></li>#}
                             {% else %}

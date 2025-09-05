@@ -18,13 +18,16 @@ class RegisterUserView(generic_views.CreateView):
     def form_valid(self, form):
         response = super().form_valid(form)
         login(self.request, form.instance)
+        messages.success(self.request, "Registration successful. Welcome!")
         return response
 
 
 class LoginUserView(auth_views.LoginView):
     template_name = "account/login.html"
     form_class = LoginUserForm
-    success_url = reverse_lazy("home")
+
+    def get_success_url(self):
+        return reverse_lazy("home")
 
 
 @login_required
@@ -38,3 +41,6 @@ class ProfileUserView(LoginRequiredMixin, generic_views.DetailView):
     model = UserModel
     template_name = "account/profile.html"
     context_object_name = "user_object"
+
+    def get_object(self, queryset=None):
+        return self.request.user
